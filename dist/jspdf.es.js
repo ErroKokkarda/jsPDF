@@ -1,7 +1,7 @@
 /** @license
  *
  * jsPDF - PDF Document creation from JavaScript
- * Version 2.3.1 Built on 2021-03-08T15:44:11.674Z
+ * Version 2.3.1 Built on 2021-07-22T12:02:42.761Z
  *                      CommitID 00000000
  *
  * Copyright (c) 2010-2020 James Hall <james@parall.ax>, https://github.com/MrRio/jsPDF
@@ -3685,14 +3685,6 @@ function jsPDF(options) {
     if (isNaN(width)) {
       width = format[0];
       height = format[1];
-    }
-
-    if (width > 14400 || height > 14400) {
-      console.warn(
-        "A page in a PDF can not be wider or taller than 14400 userUnit. jsPDF limits the width/height to 14400"
-      );
-      width = Math.min(14400, width);
-      height = Math.min(14400, height);
     }
 
     format = [width, height];
